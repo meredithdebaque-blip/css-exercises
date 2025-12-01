@@ -7,7 +7,7 @@ body {
 .header {
   height: 72px;
   background: darkmagenta;
-  color: white;
+  color: rgb(56, 5, 5);
 }
 
 .footer {
@@ -26,4 +26,88 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+}
+
+/* My code*/
+
+/* division in block */
+
+body {
+  display:flex;
+  flex-direction: column;
+}
+
+.mainsite{
+  flex:1;
+
+  display:flex;
+}
+
+.articles{
+  display:flex;
+  padding:48px;
+  flex-wrap:wrap;
+    gap: 32px;
+
+}
+
+
+/*- There is 48px padding around the 'cards' section.
+- The cards are arranged horizontally, but wrap to multiple lines when they run out of room on the page.*/
+
+
+/* individual styling */
+
+.header 
+/*- The header text is size 32px and weight 900.
+- The header text is vertically centered and 16px from the edge of the screen.*/
+{
+  display:flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 900;
+  color:white;
+  padding-left: 16px;
+  }
+
+
+/*- The sidebar and cards take up all available space above the footer.
+- The sidebar is 300px wide (and it doesn't shrink).
+- The sidebar links are size 24px, are white, and do not have the underline text decoration.
+- The sidebar has 16px padding.*/
+
+.sidebar 
+{
+flex-shrink: 0;
+padding:16px;
+font-size: 24px;
+gap:32px;
+}
+
+.sidebar ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+.sidebar a{
+
+  color:white;
+  text-decoration: none;
+
+}
+
+.card
+{
+width:300px;
+padding:32px;
+/*margin:5px;*/
+/*gap:12px;*/
+}
+
+.footer
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
 }
